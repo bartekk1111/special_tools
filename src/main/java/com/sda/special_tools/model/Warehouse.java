@@ -11,9 +11,14 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Data
 public class Warehouse {
+    @Column(name = "warehouse_id")
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long warehouseId;
+
+    @Column(name = "warehouse_name")
     private String warehouseName;
+
+    @Column(name = "warehouse_email")
     private String warehouseEmail;
 }

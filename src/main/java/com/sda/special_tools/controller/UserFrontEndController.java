@@ -7,27 +7,27 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class UserFrontEndController {
 
     @GetMapping("/")
-    public String index(){
+    public String index() {
         return "index";
     }
 
     @GetMapping("/login")
-    public String login(){
+    public String login() {
         return "login";
     }
 
     @GetMapping("/search")
-    public String search(){
+    public String search() {
         return "search";
     }
 
     @GetMapping("/account")
-    public String account(){
+    public String account() {
         return "account";
     }
 
     @GetMapping("/basket")
-    public String basket(){
+    public String basket() {
         return "basket";
     }
 }

@@ -16,14 +16,21 @@ public class Tool {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long tollId;
+
+    @Column(name = "tool_name")
     private String toolName;
 
+    @Column(name = "description")
+    private String toolDescription;
+
     @ManyToMany
-    @JoinTable(
-            name = "tool_warehouse",
+    @JoinTable(name = "tool_warehouse",
     joinColumns = @JoinColumn(name = "tool_id"),
     inverseJoinColumns = @JoinColumn(name = "warehouse_id")
     )
-    private Set<Warehouse> toolWarehouses;
+    private Set<Warehouse> toolWarehouse;
+
+    @Column(name = "quantity")
+    private Long toolQty;
 
 }
